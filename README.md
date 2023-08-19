@@ -244,6 +244,7 @@ Alternatively, refer to the [developer instructions](#developer-instructions) fo
                                          for stdin), one URL per line. Lines
                                          starting with '#', ';' or ']' are
                                          considered as comments and ignored.
+                                         File can be of text or any simple format.
     --id                                 Use only video ID in file name
     -o, --output TEMPLATE                Output filename template, see the
                                          "OUTPUT TEMPLATE" for all the info
@@ -477,6 +478,23 @@ Alternatively, refer to the [developer instructions](#developer-instructions) fo
                                          /sdcard/Music/ && rm {}'
     --convert-subs FORMAT                Convert the subtitles to other format
                                          (currently supported: srt|ass|vtt|lrc)
+
+
+### To Downlaod Videos in Group
+Videos can be downlaoded in group by using `-a` or `--batch-file`.
+```
+youtube-dl -a [FILE]
+```
+
+`FILE` format:
+write in similer format in a `.txt` or `.bat` file; ie: `link.txt`
+```
+https://example.link1
+https://example.link2
+https://example.link3
+```
+
+
 
 # CONFIGURATION
 
@@ -773,6 +791,8 @@ $ youtube-dl --date 19700101
 $ # Download only the videos uploaded in the 200x decade
 $ youtube-dl --dateafter 20000101 --datebefore 20091231
 ```
+
+
 
 # FAQ
 
